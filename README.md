@@ -16,7 +16,7 @@ The Enhanced Oil Recovery (EOR) method can increase oil reservoir recovery by up
 |    Arya Fattah Muhammad     | M181DKX4201 |  Machine Learning  |
 |         Salma Azizah        | M306DSY4824 |  Machine Learning  |
 |    Muhammad Haikal Fuady    | C082DKX3902 |  Cloud Computing   |
-|    Miftahul Huda Guntara    | A7214F1985  |  Cloud Computing   |
+|    Miftahul Huda Guntara    | C230DSX3436 |  Cloud Computing   |
 |    Muhammad Riyadh Faisal   | A344DSX2056 | Mobile Development |
 
 ## Prototype
