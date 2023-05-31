@@ -1,0 +1,19 @@
+{
+  "name": "dom-eor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "lint": "eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^18.1.0",
+    "hapi-cors": "^1.0.3",
+    "nanoid": "^4.0.2",
+    "uuid": "^9.0.0"
+  }
+}

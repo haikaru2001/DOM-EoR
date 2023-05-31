@@ -1,0 +1,141 @@
+const scenarios = [
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>', value: 10 },
+        { parameter: 'Viscosity', operator: '>', value: 20 },
+        { parameter: 'OilSaturation', operator: '>', value: 40 },
+        { parameter: 'OilSaturation', operator: '<', value: 50 },
+        { parameter: 'FormationType', operator: 'in', value: ['Sand', 'Sandstone'] },
+        { parameter: 'NetThickness', operator: '>', value: 3 },
+        { parameter: 'Permeability', operator: '>', value: 50 },
+        { parameter: 'Depth', operator: '>', value: 150 },
+        { parameter: 'Depth', operator: '<', value: 1500 },
+        { parameter: 'Temperature', operator: 'NC' },
+      ],
+      output: {
+        Type: 'Thermal',
+        EORProcess: 'Steam Injection',
+      },
+    },
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>=', value: 10 },
+        { parameter: 'Density', operator: '<=', value: 40 },
+        { parameter: 'Viscosity', operator: '<', value: 1000 },
+        { parameter: 'OilSaturation', operator: '>', value: 40 },
+        { parameter: 'OilSaturation', operator: '<', value: 50 },
+        { parameter: 'FormationType', operator: 'in', value: ['Sand', 'Sandstone'] },
+        { parameter: 'NetThickness', operator: '>', value: 3 },
+        { parameter: 'Permeability', operator: '>', value: 50 },
+        { parameter: 'Depth', operator: '>', value: 150 },
+        { parameter: 'Temperature', operator: 'NC' },
+      ],
+      output: {
+        Type: 'Thermal',
+        EORProcess: 'In situ Combustion',
+      },
+    },
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>', value: 25 },
+        { parameter: 'Viscosity', operator: '>=', value: 5 },
+        { parameter: 'Viscosity', operator: '<=', value: 125 },
+        { parameter: 'OilSaturation', operator: '>', value: 10 },
+        { parameter: 'FormationType', operator: 'in', value: ['Preferable Sandstone'] },
+        { parameter: 'NetThickness', operator: 'NC' },
+        { parameter: 'Permeability', operator: '>', value: 20 },
+        { parameter: 'Depth', operator: '<', value: 2700 },
+        { parameter: 'Temperature', operator: '<', value: 90 },
+      ],
+      output: {
+        Type: 'Chemical',
+        EORProcess: 'Polimer',
+      },
+    },
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>', value: 15 },
+        { parameter: 'Viscosity', operator: '>=', value: 20 },
+        { parameter: 'Viscosity', operator: '<=', value: 30 },
+        { parameter: 'OilSaturation', operator: '>', value: 30 },
+        { parameter: 'FormationType', operator: 'in', value: ['Preferable Sandstone'] },
+        { parameter: 'NetThickness', operator: '>', value: 3 },
+        { parameter: 'Permeability', operator: '>', value: 20 },
+        { parameter: 'Depth', operator: '<', value: 2700 },
+        { parameter: 'Temperature', operator: '<', value: 90 },
+      ],
+      output: {
+        Type: 'Chemical',
+        EORProcess: 'Surfactant-polymer',
+      },
+    },
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>=', value: 13 },
+        { parameter: 'Density', operator: '<=', value: 35 },
+        { parameter: 'Viscosity', operator: '<', value: 200 },
+        { parameter: 'OilSaturation', operator: '>', value: 10 },
+        { parameter: 'FormationType', operator: 'in', value: ['Preferable Sandstone'] },
+        { parameter: 'NetThickness', operator: 'NC' },
+        { parameter: 'Permeability', operator: '>', value: 20 },
+        { parameter: 'Depth', operator: '<', value: 2700 },
+        { parameter: 'Temperature', operator: '<', value: 90 },
+      ],
+      output: {
+        Type: 'Chemical',
+        EORProcess: 'Alkaline',
+      },
+    },
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>', value: 35 },
+        { parameter: 'Viscosity', operator: '<', value: 10 },
+        { parameter: 'OilSaturation', operator: '>', value: 30 },
+        { parameter: 'FormationType', operator: 'in', value: ['Sandstone', 'Carbonate'] },
+        { parameter: 'NetThickness', operator: '>=', value: 5 },
+        { parameter: 'NetThickness', operator: '<=', value: 7.5 },
+        { parameter: 'Permeability', operator: 'NC' },
+        { parameter: 'Depth', operator: '>', value: 1350 },
+        { parameter: 'Temperature', operator: 'NC' },
+      ],
+      output: {
+        Type: 'Miscible gas injection',
+        EORProcess: 'Hydrocarbon gas',
+      },
+    },
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>', value: 25 },
+        { parameter: 'Viscosity', operator: '<', value: 12 },
+        { parameter: 'OilSaturation', operator: '>', value: 30 },
+        { parameter: 'FormationType', operator: 'in', value: ['Sandstone', 'Carbonate'] },
+        { parameter: 'NetThickness', operator: '>=', value: 5 },
+        { parameter: 'NetThickness', operator: '<=', value: 7.5 },
+        { parameter: 'Permeability', operator: 'NC' },
+        { parameter: 'Depth', operator: '>', value: 600 },
+        { parameter: 'Temperature', operator: 'NC' },
+      ],
+      output: {
+        Type: 'Miscible gas injection',
+        EORProcess: 'CO2',
+      },
+    },
+    {
+      conditions: [
+        { parameter: 'Density', operator: '>', value: 35 },
+        { parameter: 'Viscosity', operator: '<', value: 10 },
+        { parameter: 'OilSaturation', operator: '>', value: 30 },
+        { parameter: 'FormationType', operator: 'in', value: ['Sandstone', 'Carbonate'] },
+        { parameter: 'NetThickness', operator: '>=', value: 5 },
+        { parameter: 'NetThickness', operator: '<=', value: 7.5 },
+        { parameter: 'Permeability', operator: 'NC' },
+        { parameter: 'Depth', operator: '>', value: 1350 },
+        { parameter: 'Temperature', operator: 'NC' },
+      ],
+      output: {
+        Type: 'Miscible gas injection',
+        EORProcess: 'Hydrocarbon gas',
+      },
+    },
+  ];
+  
