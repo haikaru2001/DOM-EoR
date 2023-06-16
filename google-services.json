@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1021022335136",
+    "firebase_url": "https://dom-eor-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dom-eor",
+    "storage_bucket": "dom-eor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021022335136:android:1c9962c6d3c1e8844b99c5",
+        "android_client_info": {
+          "package_name": "com.id.domeor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021022335136-sj26tick2bi8d9m43710icrglotsin4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHnHZQhwxBiMzYzq9DXAZSQTwFDAQjE8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021022335136-2j9l9inmd816ferjaekl64jehaigb0ko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
